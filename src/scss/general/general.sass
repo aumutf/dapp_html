@@ -1,0 +1,209 @@
+
+*
+  box-sizing: border-box
+  &:focus, &:active
+    outline: none !important
+
+html
+  +adaptiv-value("font-size", 25, 19)
+
+body
+  font:
+    family: $Inter
+    weight: 400
+  +adaptiv-value("font-size", 14, 13)
+  color: $fontColorMain
+  line-height: 1
+  min-width: $phone-width-min
+  margin: 0
+  padding: 0
+  height: 100vh
+  background-color: var(--bgcolor)
+
+h1, h2, h3, h4, p, ul
+  margin: 0px
+  padding: 0px
+
+a
+  display: inline-block
+  text-decoration: none
+  color: inherit
+  &:hover, &:active
+    text-decoration: none
+    color: inherit
+
+ul
+  list-style: none
+
+h1
+  font-size: $fontSize_h1
+  line-height: $lineHeight_h1
+  font-weight: normal
+
+h2
+  line-height: 1.21
+  +adaptiv-value('font-size', 18, 64)
+
+h3
+  line-height: $lineHeight_h3
+  +adaptiv-value("font-size", 24, 20)
+
+.container
+  max-width: 1200px
+  width: 100%
+  margin: 0 auto
+  +adaptiv-value('padding-left', 20, 20)
+  +adaptiv-value('padding-right', 20, 20)
+
+.logo
+  display: flex
+  align-items: center
+  &>a
+    width: 100%
+    height: 100%
+  img
+    max-width: 100%
+    height: 100%
+    object-fit: contain
+
+.btn
+  position: relative
+  text-decoration: none
+  -webkit-appearance: none
+  border: 0
+  cursor: pointer
+  user-select: none
+  outline: none
+  background-color: transparent
+  padding: 0
+  font-size: inherit
+  &:focus, &:active, &.focus, &:hover
+    outline: none
+    box-shadow: none
+    color: inherit
+
+  &--filled
+    color: $fontColorMain
+    border-radius: $br_btn
+    background: $violetta
+    +tablet
+      +adaptiv-value("padding-left", 28, 3)
+      +adaptiv-value("padding-right", 28, 3)
+      +adaptiv-value("padding-top", 5, 5)
+      +adaptiv-value("padding-bottom", 5, 5)
+
+    &:hover
+      opacity: 0.8!important
+      background-color: $violetta!important
+      border: 0!important
+
+.btn-close
+  display: inline-block
+  width: 24px
+  height: 24px
+  min-width: 24px
+  min-height: 24px
+  background:
+    color: transparent
+    image: url("../images/icons/close.svg")
+    repeat: no-repeat
+    size: auto
+  position: center
+  +tablet
+    +adaptiv-value("width", 24, 24)
+    +adaptiv-value("min-width", 24, 24)
+    +adaptiv-value("height", 24, 24)
+    +adaptiv-value("min-height", 24, 24)
+    +adaptiv-value("padding", 5, 24)
+
+.dropdown-menu
+  display: none
+  flex-direction: column
+  border: none
+
+  .menu-item
+    margin-right: 0
+    &:last-child
+      margin-bottom: 0
+    &>a
+      display: flex
+      align-items: center
+      padding: 0
+      line-height: inherit
+      color: inherit
+      &:hover
+        background-color: transparent
+
+    .menu__icon
+      width: 24px
+      height: 24px
+      min-width: 24px
+      min-height: 24px
+      display: inline-block
+      margin-right: 10px
+
+.section
+  +adaptiv-value("margin-top", 65, 35)
+
+.img-container
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  margin: auto
+  overflow: hidden
+
+.link
+  color: $violetta
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover,
+.nav>li>a:focus, .nav>li>a:hover,
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link
+  background-color: $violetta
+  color: $fontColorMain
+
+.nav-pills
+  column-gap: 0
+  .nav-link
+    padding: 8px 12px
+    color: $fontColorMain
+    border-radius: $br_btn
+
+.section-tab-head
+  margin-bottom: 18px
+  position: relative
+  display: grid
+  grid-template-columns: 1fr 0.2fr
+  row-gap: 28px
+  +laptop
+    display: flex
+    align-items: center
+  h3.title
+    +adaptiv-value("margin-right", 22, 0)
+  &>.link
+    margin-left: auto
+  .section__pills
+    overflow-x: scroll
+    flex-wrap: nowrap
+    +tablet
+      grid-row: 2
+      grid-column: 1/3
+
+  .dapp-img-mini
+    width: 60px
+    height: 60px
+
+.section-tab
+  .tab-content
+    //min-height: 486px
+    +adaptiv-value("min-height", 300, 150)
+  &.section-crypto .tab-content
+    +adaptiv-value("min-height", 150, 75)
+  &__content .btn-seemore
+    background-color: #303030
+    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.15)
+    color: #FFFFFF
+    text-transform: uppercase
+    font-size: 14px

@@ -1,0 +1,105 @@
+/* HOME styles */
+
+//section styles
+
+.section .section-head,
+.section-mid-title,
+.comment-section .nav-tabs
+  border: none
+
+.section .section-content
+  display: grid
+  column-gap: 20px
+  row-gap: 36px
+  margin: 0
+  float: unset
+  width: 100%
+  position: relative
+  grid-template-columns: 1fr
+  +laptop
+    grid-template-columns: repeat(3, 1fr)
+
+.section .section-content-btm
+  display: block
+  +laptop
+    display: block
+
+  .carousel-inner
+    display: block
+    +laptop
+      display: grid
+      grid-template-columns: repeat(4, 1fr)
+      +adaptiv-value("column-gap", 30, 0)
+
+  .carousel-item
+    +laptop
+      display: block
+
+.carousel-item__inner
+  display: grid
+  grid-template-columns: calc(64px + 336 * ((100vw - 320px)/ 1440)) auto
+  +adaptiv-value-imp("grid-column-gap", 40, 7)
+  +laptop
+    display: block
+
+  .post-item-image
+    grid-row: span 2
+    +adaptiv-value-imp("width", 400, 64)
+    +adaptiv-value-imp("height", 400, 64)
+    min-height: 64px !important
+    +laptop
+      grid-row: unset
+      width: unset!important
+
+  h5.title
+    grid-column: 2
+    +laptop
+      grid-column: unset
+
+.section .section-head
+  width: 100%
+  display: flex
+  position: unset
+  float: none
+  justify-content: space-between
+  align-items: center
+  margin-bottom: 16px
+  .title
+    margin-bottom: 0
+    background-color: $bgColor
+    padding: 0
+    height: auto
+    text-transform: capitalize
+
+.img-container
+  position: relative
+  height: 100%
+
+.subtitle
+  +adaptiv-value("font-size", 12, 12)
+  color: #938E8E
+  line-height: 1.2
+  &>a
+    color: inherit
+
+.post-item-sm
+  .post-item-image
+    border-radius: 8px
+    overflow: hidden
+    +adaptiv-value("margin-bottom", 18, 8)
+  h5.title
+    +adaptiv-value("font-size", 14, 14)
+    +laptop
+      +adaptiv-value("font-size", 14, 4)
+
+.latest-dapp
+  .section-content:not(.section-content-btm)
+    display: none
+    +laptop
+      display: grid
+
+.post-item-image
+  .img-container
+    position: static
+
+/* HOME styles end */
