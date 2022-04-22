@@ -30,6 +30,7 @@
       display: grid
       grid-template-columns: repeat(4, 1fr)
       +adaptiv-value("column-gap", 30, 0)
+      
 
   .carousel-item
     +laptop
@@ -39,6 +40,7 @@
   display: grid
   grid-template-columns: calc(64px + 336 * ((100vw - 320px)/ 1440)) auto
   +adaptiv-value-imp("grid-column-gap", 40, 7)
+  grid-template-rows: 20px auto
   +laptop
     display: block
 
