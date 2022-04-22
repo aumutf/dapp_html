@@ -7,14 +7,16 @@
 
 <body>
   @@include('html/header.html',{})
-  <div class="block">
+  <!--  <div class="block">
     <div class="container">
       @@include('html/sliderTop.html',{})
     </div>
-  </div>
-  
+  </div>-->
+
   @@include('html/home.html',{})
   @@include('html/socialSignal.html',{})
+  @@include('html/whatsNew.html',{})
+<!--  @@include('html/todaysTop.html',{})-->
 
   @@include('html/footer.html',{})
   <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
@@ -24,10 +26,11 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
+  <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
   <script src="js/app.min.js"></script>
   <script>
     $(window).on('load', function () {
-      $('.str-slider-dapp').liMarquee({
+      /*$('.str-slider-dapp').liMarquee({
         direction: 'left',
         circular: true,
         loop: -1,
@@ -45,6 +48,14 @@
         hoverStop: true,
         scrollStop: true,
         scrollDelay: 200
+      });*/
+
+      $('#dapps_table').DataTable({
+        "scrollX": true,
+        "bPaginate": false,
+        "bFilter": false,
+        "bInfo": false,
+        reponsive: true
       });
 
       if (document.documentElement.clientWidth <= 768) {
