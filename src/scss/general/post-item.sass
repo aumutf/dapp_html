@@ -21,55 +21,46 @@
     height: 100%!important
     object-fit: cover
 
-
 .post-item-mid .title
-  font-size: 16px
-  line-height: 22px
+  font-size: 17px
+  line-height: 1.2
   text-transform: none
   font-weight: 500
   margin-bottom: 5px
   margin-top: 10px
 
-
-.post-item-mid .title a 
+.post-item-mid .title a
   display: block
 
-
-.post-item-mid .description 
+.post-item-mid .description
   color: #777
   font-size: 14px
   float: left
   line-height: 22px
 
-
-.post-item-mid img 
+.post-item-mid img
   width: 100%
 
-
-.post-item-horizontal 
+.post-item-horizontal
   position: relative
   float: left
   width: 100%
   height: auto
   margin-bottom: 30px
 
-
-.post-item-horizontal .col-sm-5 
+.post-item-horizontal .col-sm-5
   width: 48.6667%
 
-
-.post-item-horizontal .col-sm-7 
+.post-item-horizontal .col-sm-7
   width: 51.333%
 
-
-.post-item-horizontal .category-label 
+.post-item-horizontal .category-label
   left: 23px
   position: absolute
   top: 8px
   z-index: 10
 
-
-.post-item-horizontal .title 
+.post-item-horizontal .title
   float: left
   display: block
   width: 100%
@@ -79,38 +70,33 @@
   text-transform: none
   margin-top: 10px
 
-
-.post-item-horizontal .title a 
+.post-item-horizontal .title a
   display: block
 
-
-.post-item-horizontal .small-post-meta 
+.post-item-horizontal .small-post-meta
   float: left
   display: block
   width: 100%
   margin-bottom: 10px
 
-
-.post-item-horizontal .description 
+.post-item-horizontal .description
   color: #777
   float: left
   line-height: 22px
   font-size: 13px
 
-
-.post-item-video-big 
+.post-item-video-big
   display: block
   width: 100%
   float: left
   position: relative
   margin-bottom: 30px
 
-
-.post-item-video-big .post-item-image 
+.post-item-video-big .post-item-image
   height: 422px
   overflow: hidden
 
-.post-item-video-big .overlay 
+.post-item-video-big .overlay
   background: rgba(0, 0, 0, 0) linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.30) 50%, rgba(0, 0, 0, 0.88) 100%) repeat scroll 0 0
   bottom: 0
   content: ""
@@ -121,16 +107,14 @@
   width: 100%
   will-change: opacity
 
-
-.post-item-video-big .caption 
+.post-item-video-big .caption
   position: absolute
   bottom: 0
   left: 0
   padding: 0 20px 20px 20px
   pointer-events: none
 
-
-.post-item-video-big .title 
+.post-item-video-big .title
   color: #fff
   font-size: 24px
   font-weight: 500
@@ -138,45 +122,44 @@
   margin-top: 10px
   margin-bottom: 10px
 
-
-.post-item-video-big .title a 
+.post-item-video-big .title a
   color: #fff
 
-
-.post-item-video-big .caption .category-label 
+.post-item-video-big .caption .category-label
   margin-bottom: 5px
 
-
-.post-item-video-big .small-post-meta a 
+.post-item-video-big .small-post-meta a
   pointer-events: auto
 
 .post-item-mid
-    display: flex
-    flex-direction: column
+  display: flex
+  flex-direction: column
     //row-gap: 7px
-    float: unset
+  float: unset
+  width: 100%
+  position: relative
+  margin-bottom: 15px
+  h5.title
+    margin-bottom: 0
+    margin-top: 0
+    position: absolute
+    bottom: 0
     width: 100%
-    position: relative
-    margin-bottom: 15px
-    h5.title
-      margin-bottom: 0
-      margin-top: 0
+    background: rgba(32, 32, 32, 0.5)
 
 .post-item-image
-    width: 100%
-    display: block
-    position: relative
-    background-color: transparent
-    margin-bottom: 7px
-    height: 240px!important
-    +laptop
-      height: 150px!important
+  width: 100%
+  display: block
+  position: relative
+  background-color: transparent
+  height: 240px!important
+  +laptop
+    height: 150px!important
 
 .post-item-sm
   .post-item-image
     +laptop
       height: 140px!important
-
 
 .post-meta
   display: flex
@@ -195,6 +178,5 @@
       background-color: $grey3
       display: inline-block
       margin-left: 7px
-
 
 /* POST ITEM styles end */

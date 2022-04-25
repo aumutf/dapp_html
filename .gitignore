@@ -4,4 +4,3 @@ node_modules
 dist
 gulp/version.json 
 .gitignore
-gulp/version.json
