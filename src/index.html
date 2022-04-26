@@ -16,7 +16,7 @@
   @@include('html/home.html',{})
   @@include('html/socialSignal.html',{})
   @@include('html/whatsNew.html',{})
-  @@include('html/todaysTop.html',{})
+  <!--  @@include('html/todaysTop.html',{})-->
 
   @@include('html/footer.html',{})
   <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
@@ -51,12 +51,10 @@
       });*/
 
       $('#dapps_table').DataTable({
+        "scrollX": true,
         "bPaginate": false,
         "bFilter": false,
         "bInfo": false,
-        "targets": "no-sort",
-        "bSort": false,
-        "order": [],
         reponsive: true
       });
 
